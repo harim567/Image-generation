@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import os
 
 from Models.SDF import display_SDF
+from Models.SDFv2 import display_SDFv2
 from Models.Brea import display_Brea
 from Models.DreamShaperv7 import display_DreamShaper_v7
 from Models.Anime_DF import display_Anime_df
@@ -24,7 +25,7 @@ with st.sidebar:
     # Create the options menu
     selected = option_menu(menu_title="Image-Gen Models",
                            # options=["Stable Diffusion XL","Brea v2","DreamShaper v7","Dall-e2","Anime Diffusion"],
-                           options=["Stable Diffusion XL","Brea v2","DreamShaper v7","Anime Diffusion"],
+                           options=["Stable Diffusion XL","Stable Diffusion XL v2","Brea v2","DreamShaper v7","Anime Diffusion"],
                            icons=["box", "box","box","box","box"],
                            menu_icon="boxes",
                            default_index=0
@@ -32,6 +33,8 @@ with st.sidebar:
     
 if selected == "Stable Diffusion XL":
     display_SDF(HUGGINGFACE_API_KEY)
+elif selected == "Stable Diffusion XL v2":
+    display_SDFv2(HUGGINGFACE_API_KEY)    
 elif selected == "Brea v2":
     display_Brea(HUGGINGFACE_API_KEY)
 elif selected == "DreamShaper v7":
