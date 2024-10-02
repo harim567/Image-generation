@@ -23,8 +23,8 @@ st.set_page_config(
 with st.sidebar:
     # Create the options menu
     selected = option_menu(menu_title="Image-Gen Models",
-                         #  options=["Stable Diffusion XL","Brea v2","DreamShaper v7","Dall-e2","Anime Diffusion"],
-                           options=["Stable Diffusion XL"],
+                           # options=["Stable Diffusion XL","Brea v2","DreamShaper v7","Dall-e2","Anime Diffusion"],
+                           options=["Stable Diffusion XL","Brea v2","DreamShaper v7","Anime Diffusion"],
                            icons=["box", "box","box","box","box"],
                            menu_icon="boxes",
                            default_index=0
